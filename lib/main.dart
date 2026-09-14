@@ -1,93 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MovieLogApp());
-}
-
-// lib/movie_log_app.dart
-class MovieLogApp extends StatelessWidget {
-  const MovieLogApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MovieLog',
-      theme: ThemeData(
-        useMaterial3: true,
+      home: Scaffold(
+        body: Center(child: Text('Flutter 시작!')),
       ),
-      home: const StartScreen(), // 첫 실행 화면 지정
-    );
-  }
+    ),
+  );
 }
-
-// lib/start_screen.dart
-class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Icon(Icons.movie_outlined),
-            Text('MovieLog'),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/*
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  //@override
-  //State<MyHomePage> createState() => _MyHomePageState();
-}
-*/
-
-/*
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-              // 'Hello Flutter!',
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
-*/

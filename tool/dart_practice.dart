@@ -13,14 +13,14 @@ String displayName(String? nickname) {
   .isNotEmpty == true ? nickname! : '이름 없음';
 }
 
-final movie_list = <Movie>[
+final movieList = <Movie>[
     const Movie(id: 1, title: '곡성'),
     const Movie(id: 2, title: '곤지암'),
     const Movie(id: 3, title: '주온'),
 ];
 
 void main(){
-    for (final movie in movie_list){
+    for (final movie in movieList){
         print(movie.title);
     }
 
@@ -29,6 +29,7 @@ void main(){
     print(displayName('  '));
     print(displayName('  무비러버  '));
 }
+
 
 
 
