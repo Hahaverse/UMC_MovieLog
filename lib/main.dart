@@ -1,33 +1,57 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MovieLogApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// lib/movie_log_app.dart
+class MovieLogApp extends StatelessWidget {
+  const MovieLogApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'MovieLog',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const StartScreen(), // 첫 실행 화면 지정
     );
   }
 }
 
+// lib/start_screen.dart
+class StartScreen extends StatelessWidget {
+  const StartScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Icon(Icons.movie_outlined),
+            Text('MovieLog'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  //@override
+  //State<MyHomePage> createState() => _MyHomePageState();
 }
+*/
 
+/*
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -66,3 +90,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
